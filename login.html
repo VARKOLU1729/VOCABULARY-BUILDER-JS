@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      text-align: center;
+      padding: 100px 150px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+
+    .container label,
+    .container input,
+    .container button {
+      margin-bottom: 10px;
+    }
+
+    .container input[type="text"],
+    .container input[type="password"] {
+      padding: 8px;
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .container button {
+      padding: 10px 60px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <div class="container">
+      <label for="username">Username:</label><br>
+      <input type="text" id="username" placeholder="Username (e.g., xxxxx)"><br>
+      <label for="email">Email:</label><br>
+      <input type="text" id="email" placeholder="Email (e.g., ex@gmail.com)"><br>
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" placeholder="Password"><br>
+      <button>Submit</button>
+    </div>
+  </div>
+  <script>
+    let x1 = document.getElementsByTagName("button")[0];
+    x1.onclick = ()=>{
+      let t = document.getElementsByTagName("input")[0].value;
+      let url = "index.html?value="+encodeURIComponent(t);
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>
